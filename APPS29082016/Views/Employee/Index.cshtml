@@ -1,0 +1,26 @@
+﻿@using APPS29082016.DAL.EfRepository
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+<div id="employeeView">
+    @Html.Partial("~/Views/Employee/PartialViews/_employeeView.cshtml")
+</div>
+<div>
+    @Html.Partial("~/Views/Employee/PartialViews/_employeeCreate.cshtml", new tbl_EmployeeInfo())
+</div>
+</body>
+</html>

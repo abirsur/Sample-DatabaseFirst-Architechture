@@ -1,0 +1,32 @@
+﻿@model APPS29082016.Core.DTO.EmployeesInfoList
+<div>
+    @if (Model?.Employees != null)
+    {
+        <table>
+            <thead>
+            <tr>
+                <th>Employee Name</th>
+                <th>Designation</th>
+                <th>Email</th>
+                <th>Location</th>
+                <th>Remarks</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            @{
+                foreach (var items in Model.Employees)
+                {
+                    <tr>
+                        <td>@items.EmpName</td>
+                        <td>@items.Designation</td>
+                        <td>@items.Email</td>
+                        <td>@items.Location</td>
+                        <td>@items.Remarks</td>
+                    </tr>
+                }
+            }
+            </tbody>
+        </table>
+    }
+</div>
