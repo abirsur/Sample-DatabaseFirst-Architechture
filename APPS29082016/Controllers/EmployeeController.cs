@@ -49,7 +49,7 @@ namespace APPS29082016.Controllers
             SalaryInfo salaryInfo = new SalaryInfo
             {
                 EmployeeSalary = new tbl_Salary {SalaryAmount = (decimal) 18000.00, ProfessionalTax = (decimal) 678.00},
-                SalaryForEmployee = "Sona"
+                SalaryForEmployee = employeeInfo.Email
             };
             if (!operationResponse.ExceptionFound && operationResponse.StatusCode > 0)
             {
