@@ -45,16 +45,7 @@ namespace APPS29082016.Controllers
         [HttpPost]
         public ActionResult CreateEmployee(EmployeeInfo employeeInfo)
         {
-            //EmployeeInfo employeeInfo = new EmployeeInfo
-            //{
-            //    Designation = "Accountant",
-            //    Email = "abir@gmail.com",
-            //    EmpName = "Sona",
-            //    Location = "Kolkata",
-            //    Remarks = "Good"
-            //};
-            
-            OperationResponse operationResponse = _employeeService.CreateEmployee(employeeInfo);
+           OperationResponse operationResponse = _employeeService.CreateEmployee(employeeInfo);
             SalaryInfo salaryInfo = new SalaryInfo
             {
                 EmployeeSalary = new tbl_Salary {SalaryAmount = (decimal) 18000.00, ProfessionalTax = (decimal) 678.00},
